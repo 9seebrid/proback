@@ -58,7 +58,8 @@ JWT_SECRET=your_jwt_secret
    서버는 기본적으로 https://whipped.9seebird.site에서 실행됩니다.
 
 📂 폴더 구조
-'''bash
+
+```bash
 코드 복사
 proback/
 ├── config/ # 데이터베이스 및 환경 설정
@@ -73,7 +74,8 @@ proback/
 │ └── authMiddleware.js
 ├── app.js # 메인 애플리케이션 파일
 └── package.json # 프로젝트 설정 파일
-'''
+```
+
 🎯 주요 API 엔드포인트
 회원가입 및 로그인
 
