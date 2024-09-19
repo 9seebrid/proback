@@ -58,7 +58,7 @@ JWT_SECRET=your_jwt_secret
    서버는 기본적으로 https://whipped.9seebird.site에서 실행됩니다.
 
 📂 폴더 구조
-bash
+'''bash
 코드 복사
 proback/
 ├── config/ # 데이터베이스 및 환경 설정
