@@ -37,25 +37,28 @@ dotenv: 환경 변수 관리
 3. 환경 변수 설정
    .env 파일을 프로젝트 루트에 생성하고 아래와 같이 설정합니다:
 
-bash
+```bash
 코드 복사
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=yourpassword
 DB_NAME=proback
-
 JWT_SECRET=your_jwt_secret
+```
 
 4. 데이터베이스 마이그레이션
-   bash
+   ```bash
    코드 복사
    npx sequelize db:migrate
+   ```
 
+````
 5. 서버 실행
-   bash
+   ```bash
    코드 복사
    npm start
    서버는 기본적으로 https://whipped.9seebird.site에서 실행됩니다.
+````
 
 📂 폴더 구조
 
@@ -86,11 +89,12 @@ POST /api/auth/login: 사용자 로그인 (JWT 발급)
 GET /api/user/profile: 로그인한 사용자 정보 조회 (JWT 인증 필요)
 예시 요청
 
-bash
+```bash
 코드 복사
 curl -X POST http://localhost:3000/api/auth/register \
 -H "Content-Type: application/json" \
 -d '{"email":"example@test.com", "password":"password123"}'
+```
 
 🤝 기여 방법
 이 저장소를 포크합니다.
