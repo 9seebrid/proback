@@ -1,7 +1,5 @@
 # 🚀 ProBack - Powerful REST API Backend
 
----
-
 ProBack는 백엔드 개발을 위한 현대적인 REST API 서버로, Node.js와 Express를 기반으로 구축되었습니다. 확장 가능하고 보안이 강화된 API를 제공하며, 다양한 기능을 손쉽게 추가할 수 있는 구조를 갖추고 있습니다.
 
 ### 📚 프로젝트 개요
