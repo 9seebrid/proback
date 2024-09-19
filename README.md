@@ -1,69 +1,60 @@
-ProBack
+# ProBack
 
-ProBack은 백엔드 개발을 위한 강력한 REST API 서버 프로젝트입니다.
-이 프로젝트는 최신 웹 개발 기술을 활용하여 확장 가능하고 안정적인 백엔드 솔루션을 제공합니다.
-다양한 기능을 쉽게 추가할 수 있도록 설계되어 있으며, 빠른 개발을 지원합니다.
+ProBack은 백엔드 개발을 위한 강력한 REST API 서버 프로젝트입니다. 이 프로젝트는 최신 웹 개발 기술을 활용하여 확장 가능하고 안정적인 백엔드 솔루션을 제공합니다. 다양한 기능을 쉽게 추가할 수 있도록 설계되어 있으며, 빠른 개발을 지원합니다.
 
-주요 기능
-사용자 인증 및 권한 관리: JWT(JSON Web Token)를 활용한 인증 시스템
-RESTful API: 클린한 구조의 REST API 제공
-데이터베이스 관리: MySQL과의 연동을 통해 효율적인 데이터 관리
-환경 구성: .env 파일을 통해 손쉬운 환경 변수 설정
-로그 관리: 서버 로그를 관리하고, 오류를 추적할 수 있는 시스템
-확장성: 모듈식 구조로 기능을 쉽게 추가 가능
+## 주요 기능
 
-기술 스택
-Node.js: 서버 사이드 로직 구현
-Express: 경량화된 웹 프레임워크
-MySQL: 관계형 데이터베이스
-Sequelize: MySQL과의 상호작용을 위한 ORM(Object-Relational Mapping) 라이브러리
-JWT: 사용자 인증 및 권한 부여를 위한 토큰 기반 인증
-dotenv: 환경 변수 관리
+- **사용자 인증 및 권한 관리**: JWT(JSON Web Token)를 활용한 인증 시스템을 통해 안전하고 효율적인 사용자 인증 및 권한 관리를 제공합니다.
+- **RESTful API**: 클린한 구조의 REST API를 제공하여 클라이언트와의 원활한 통신을 지원합니다.
+- **데이터베이스 관리**: MySQL과의 연동을 통해 효율적인 데이터 관리를 지원하며, Sequelize ORM을 사용하여 데이터베이스 작업을 간편하게 처리할 수 있습니다.
+- **환경 구성**: .env 파일을 통해 손쉬운 환경 변수 설정이 가능하여 다양한 환경에서의 유연한 설정을 지원합니다.
+- **로그 관리**: 서버 로그를 관리하고, 오류를 추적할 수 있는 시스템을 제공하여 디버깅과 유지보수를 용이하게 합니다.
+- **확장성**: 모듈식 구조로 기능을 쉽게 추가할 수 있어 프로젝트의 확장성을 보장합니다.
 
-설치 및 실행
+## 기술 스택
 
-1. 저장소 클론
-   bash
-   코드 복사
-   git clone https://github.com/9seebrid/proback.git
-   cd proback
+- **Node.js**: 서버 사이드 로직 구현을 위한 자바스크립트 런타임 환경
+- **Express**: 경량화된 웹 프레임워크로, 빠르고 간편한 서버 구축을 지원
+- **MySQL**: 관계형 데이터베이스로, 데이터의 효율적인 저장 및 관리를 지원
+- **Sequelize**: MySQL과의 상호작용을 위한 ORM(Object-Relational Mapping) 라이브러리로, 데이터베이스 작업을 간편하게 처리
+- **JWT**: 사용자 인증 및 권한 부여를 위한 토큰 기반 인증 시스템
+- **dotenv**: 환경 변수 관리를 위한 라이브러리로, 다양한 환경에서의 유연한 설정을 지원
 
-2. 의존성 설치
-   bash
-   코드 복사
-   npm install
+## 설치 및 실행
 
-3. 환경 변수 설정
-   프로젝트 루트에 .env 파일을 생성하고, 아래의 내용을 참고하여 설정합니다.
+### 1. 저장소 클론
 
-makefile
-코드 복사
-DB_HOST=localhost
-DB_USER=userid
-DB_PASSWORD=yourpassword
-DB_NAME=db_name
-SECRET_KEY= SECRET_KEY
+먼저, GitHub에서 프로젝트 저장소를 클론합니다:
 
-4. 데이터베이스 마이그레이션
-   bash
-   코드 복사
-   npx sequelize db:migrate
+```bash
+git clone https://github.com/9seebrid/proback.git
 
-5. 서버 실행
-   bash
-   코드 복사
-   npm start
-   서버는 기본적으로 https://whipped.9seebird.site에서 실행됩니다.
+2. 디렉토리 이동
+클론한 프로젝트 디렉토리로 이동합니다:
 
-사용법
-회원가입 및 로그인
+3. 의존성 설치
+프로젝트의 의존성을 설치합니다:
 
-/api/auth/register: 사용자 회원가입 API
-/api/auth/login: 사용자 로그인 API (JWT 토큰 발급)
+4. 환경 변수 설정
+프로젝트 루트 디렉토리에 .env 파일을 생성하고 필요한 환경 변수를 설정<vscode_annotation details='%5B%7B%22title%22%3A%22hardcoded-credentials%22%2C%22description%22%3A%22Embedding%20credentials%20in%20source%20code%20risks%20unauthorized%20access%22%7D%5D'>합니다</vscode_annotation>. 예시:
 
-사용자 정보
-/api/user/profile: 사용자 프로필 조회 (인증 필요)
-예시 요청
+5. 데이터베이스 설정
+MySQL 데이터베이스를 생성하고, .env 파일에 설정한 데이터베이스 정보와 일치하도록 구성합니다.
+
+6. 데이터베이스 마이그레이션
+Sequelize CLI를 사용하여 데이터베이스 마이그레이션을 실행합니다:
+
+7. 개발 서버 실행
+개발 서버를 실행합니다:
+
+서버가 실행되면, 브라우저에서 http://localhost:3000을 열어 API를 확인할 수 있습니다.
+
+사용 예제
+API 엔드포인트를 테스트하기 위해 Postman 또는 cURL을 사용할 수 있습니다. 예를 들어, 사용자 인증 엔드포인트를 테스트하려면 다음과 같이 요청을 보낼 수 있습니다:
+
+기여 방법
+이 프로젝트에 기여하려면, 먼저 저장소를 포크하고 새로운 브랜치를 생성한 후 변경 사항을 커밋하고 풀 리퀘스트를 제출해 주세요. 기여 가이드라인을 준수해 주시기 바랍니다.
 
 라이선스
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요.
+```
