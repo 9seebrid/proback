@@ -27,8 +27,6 @@ app.use(require('./routes/getRoutes'));
 
 app.use(require('./routes/postRoutes'));
 
-app.use(require('./routes/putRoutes'));
-
 const path = require('path');
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
