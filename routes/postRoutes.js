@@ -6,7 +6,6 @@ const { deleteSelectedItems } = require('../controllers/deleteSelectedItems');
 const { findId } = require('../controllers/findUser');
 const { decreaseQuantity, updateItemQuantity } = require('../controllers/getCart');
 const { postUser, loginUser } = require('../controllers/postUser');
-const { updateViewCount } = require('../controllers/postViews');
 
 router.post('/register/', postUser);
 router.post('/login/', loginUser);
@@ -20,5 +19,5 @@ router.post('/delete_all/:userId', deleteAll);
 router.post('/delete_checked_items/:userId', deleteSelectedItems);
 router.post('/findUser', findId);
 router.post('/update_diy_quantity/:userId', updateDiyQuantity);
-router.post('/view/:write_number', updateViewCount);
+
 module.exports = router;
